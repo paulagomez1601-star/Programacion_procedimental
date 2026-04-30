@@ -6,6 +6,69 @@
     <title>Inventario</title>
 </head>
 <body>
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-half">
+        
+        <div class="box">
+          <h1 class="title has-text-centered has-text-info">Registro de Producto</h1>
+          <hr>
+
+          <div class="field">
+            <label class="label">Código</label>
+            <div class="control has-icons-left">
+              <input class="input is-info" type="number" placeholder="Ej: 1010">
+              <span class="icon is-small is-left">
+                <i class="fas fa-barcode"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Nombre del Producto</label>
+            <div class="control has-icons-left">
+              <input class="input is-info" type="text" placeholder="Nombre del artículo">
+              <span class="icon is-small is-left">
+                <i class="fas fa-box"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="columns">
+            <div class="column">
+              <div class="field">
+                <label class="label">Cantidad</label>
+                <div class="control">
+                  <input class="input is-info" type="number" placeholder="0">
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="field">
+                <label class="label">Marca</label>
+                <div class="control">
+                  <input class="input is-info" type="text" placeholder="Marca">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="field mt-5">
+            <div class="control">
+              <button class="button is-info is-fullwidth is-rounded">
+                <span class="icon"><i class="fas fa-save"></i></span>
+                <span>Guardar Producto</span>
+              </button>
+            </div>
+          </div>
+
+        </div> </div>
+    </div>
+  </div>
+</section>
 </body>
 </html>
