@@ -1,0 +1,46 @@
+body {
+  font-family: sans-serif;
+  background-color: #fdceef;
+  padding: 100px;
+}
+
+
+section {
+  background: rgb(216, 216, 216);
+  max-width: 400px;
+  margin: auto;
+  padding: 70px;
+  border-radius: 20px;
+}
+
+
+.field {
+  margin-bottom: 15px;
+}
+
+
+.label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+}
+
+
+.input, .textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
