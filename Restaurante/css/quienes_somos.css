@@ -1,0 +1,23 @@
+.fondo-footer{
+    background-color: #c9879d;
+    color: white;
+    padding: 3rem 2rem;
+}
+
+.icono{
+    font-size: 28px;
+    color: white;
+    margin-right: 15px;
+}
+
+.icono:hover{
+    color: #ffe4ec;
+}
+
+hr{
+    background-color: white;
+}
+
+.image img{
+    width: 120px;
+}
