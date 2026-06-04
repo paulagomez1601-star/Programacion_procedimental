@@ -12,9 +12,10 @@ let cliente = document.querySelector("#cliente").value;
 let empleado = document.querySelector("#empleado").value;
 let administrador = document.querySelector("#administrador").value;
 let contrasena = document.getElementById("contrasena").value;
+let Telefono = document.getElementById("Telefono").value;
 
 function Nombre() {
-    if (nombre === "" || apellido === "" || fechaNacimiento === "" || tipoDocumento === "" || numeroDocumento === "" || telefono === "" || email === "" || contrasena === "") {
+    if (nombre === "" || apellido === "" || fechaNacimiento === "" || tipoDocumento === "" || numeroDocumento === "" || telefono === "" || email === "" || contrasena === ""|| telefono === "") {
         console.log("Ingresa tu nombre.");
     }
     else {
