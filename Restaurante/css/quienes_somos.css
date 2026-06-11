@@ -1,12 +1,13 @@
 .fondo-footer{
-    background-color: #d18aa1;
+    background-color: #d18aa1; /* Mantiene tu color rosa original */
     color: white;
+    padding: 3rem 2rem;       /* Mantiene el espaciado de main */
 }
 
 .icono{
-    font-size: 25px;
-    margin-right: 10px;
+    font-size: 28px;           /* Mantiene el tamaño de main */
     color: white;
+    margin-right: 15px;        /* Mantiene el margen de main */
 }
 
 .icono:hover{
@@ -15,4 +16,8 @@
 
 hr{
     background-color: white;
+}
+
+.image img{
+    width: 120px;              /* Mantiene la regla añadida en main */
 }
