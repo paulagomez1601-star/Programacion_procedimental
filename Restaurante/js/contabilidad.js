@@ -1,27 +1,35 @@
-let ventas = document.getElementById("ventas").value; 
+let ventas = document.getElementById("ventas").value;
 let fecha = document.getElementById("fecha").value;
-let ingresos = document.getElementById("ingresos").value; 
+let ingresos = document.getElementById("ingresos").value;
 let egresos = document.getElementById("egresos").value;
 let Concepto = document.getElementById("Concepto").value;
 let Valor = document.getElementById("Valor").value;
 
 function ValidarInformacion() {
+
     if (ventas === "" || fecha === "" || ingresos === "" || egresos === "" || Concepto === "" || Valor === "") {
-        console.log("Todos los campos son obligatorios. Por favor, completa el formulario.");
-    } 
+        console.log("Completa todos los campos.");
+    }
     else {
-        if (!soloNumeros.test(ventas)) {
-            console.log("El campo Ventas no puede contener letras ni caracteres especiales.");
+        if (!/[0-9]+/.test(ventas)) {
+            console.log("Las ventas deben contener solo números.");
         }
-        else if (!soloNumeros.test(ingresos)) {
-            console.log("El campo Ingresos no puede contener letras.");
+        else if (!/[0-9]+/.test(ingresos)) {
+            console.log("Los ingresos deben contener solo números.");
         }
-        else if (!soloNumeros.test(egresos)) {
-            console.log("El campo Egresos no puede contener letras.");
+        else if (!/[0-9]+/.test(egresos)) {
+            console.log("Los egresos deben contener solo números.");
         }
-        else if (!soloNumeros.test(Valor)) {
-            console.log("El campo Valor no puede contener letras.");
+        else if (!/[a-zA-Z\s]+/.test(Concepto)) {
+            console.log("El concepto no puede contener números.");
+        }
+        else if (!/[0-9]+/.test(Valor)) {
+            console.log("El valor debe contener solo números.");
+        }
+        else {
+            console.log("Información registrada correctamente.");
         }
     }
 }
+
 document.getElementById("guardar").onclick = ValidarInformacion;

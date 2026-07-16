@@ -6,18 +6,29 @@ let Precio = document.getElementById("Precio").value;
 
 function ValidarInformacion() {
     if (codigo === "" || Nombre_del_producto === "" || Cantidad === "" || Marca === "" || Precio === "") {
-        console.log("Todos los campos de producto son obligatorios. Por favor, completa el formulario.");
-    } 
+        console.log("Completa todos los campos.");
+    }
     else {
-        if (!soloNumeros.test(codigo)) {
-            console.log("El campo Código no puede contener letras ni caracteres especiales.");
+        if (codigo.length != 5 || !/[0-9]+/.test(codigo)) {
+            console.log("El código debe tener 5 dígitos.");
         }
-        else if (!soloNumeros.test(Cantidad)) {
-            console.log("El campo Cantidad no puede contener letras.");
+        else if (!/[a-zA-Z\s]+/.test(Nombre_del_producto)) {
+            console.log("El nombre del producto no puede contener números.");
         }
-        else if (!soloNumeros.test(Precio)) {
-            console.log("El campo Precio no puede contener letras.");
+        else if (!/[0-9]+/.test(Cantidad)) {
+            console.log("La cantidad debe contener solo números.");
+        }
+        else if (!/[a-zA-Z\s]+/.test(Marca)) {
+            console.log("La marca no puede contener números.");
+        }
+        else if (!/[0-9]+/.test(Precio)) {
+            console.log("El precio debe contener solo números.");
+        }
+        else {
+            console.log("Producto registrado correctamente.");
         }
     }
 }
+
+
 document.getElementById("guardar").onclick = ValidarInformacion;
