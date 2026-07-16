@@ -14,7 +14,7 @@ let administrador = document.querySelector("#administrador").value;
 let contrasena = document.getElementById("contrasena").value;
 let Telefono = document.getElementById("Telefono").value;
 
-function Nombre() {
+function ValidarInformacion() {
     if (nombre === "" || apellido === "" || fechaNacimiento === "" || tipoDocumento === "" || numeroDocumento === "" || telefono === "" || email === "" || contrasena === ""|| telefono === "") {
         console.log("Ingresa tu nombre.");
     }
@@ -36,3 +36,4 @@ function Nombre() {
         }
     }
 }
+document.getElementById("guardar").onclick = ValidarInformacion;

@@ -5,7 +5,7 @@ let egresos = document.getElementById("egresos").value;
 let Concepto = document.getElementById("Concepto").value;
 let Valor = document.getElementById("Valor").value;
 
-function validarContabilidad() {
+function ValidarInformacion() {
     if (ventas === "" || fecha === "" || ingresos === "" || egresos === "" || Concepto === "" || Valor === "") {
         console.log("Todos los campos son obligatorios. Por favor, completa el formulario.");
     } 
@@ -24,3 +24,4 @@ function validarContabilidad() {
         }
     }
 }
+document.getElementById("guardar").onclick = ValidarInformacion;

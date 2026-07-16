@@ -5,7 +5,7 @@ let Cantidad = document.getElementById("Cantidad").value;
 let Modo_de_pago = document.getElementById("Modo_de_pago").value;
 let Telefono = document.getElementById("Telefono").value;
 
-function validarPedido() {
+function ValidarInformacion() {
     if (Producto === "" || Direccion === "" || Nombre_usuario === "" || Cantidad === "" || Modo_de_pago === "" || Telefono === "") {
         console.log("Todos los campos son obligatorios. Por favor, completa el formulario.");
     } 
@@ -18,3 +18,4 @@ function validarPedido() {
         }
     }
 }
+document.getElementById("guardar").onclick = ValidarInformacion;

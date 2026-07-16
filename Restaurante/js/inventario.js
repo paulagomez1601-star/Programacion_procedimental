@@ -4,7 +4,7 @@ let Cantidad = document.getElementById("Cantidad").value;
 let Marca = document.getElementById("Marca").value;
 let Precio = document.getElementById("Precio").value;
 
-function validarProducto() {
+function ValidarInformacion() {
     if (codigo === "" || Nombre_del_producto === "" || Cantidad === "" || Marca === "" || Precio === "") {
         console.log("Todos los campos de producto son obligatorios. Por favor, completa el formulario.");
     } 
@@ -20,3 +20,4 @@ function validarProducto() {
         }
     }
 }
+document.getElementById("guardar").onclick = ValidarInformacion;
