@@ -1,118 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Usuario</title>
     <link rel="stylesheet" href="../css/usuario.css">
 </head>
+
 <body>
 
-<section class="section">
-    <div class="container">
-        <div class="box">
+    <section class="section">
+        <div class="container">
             <div class="box">
-                <h1 class="title is-4 has-text-centered">REGISTRO DE USUARIO</h1>
-            </div>
-
-            <div class="columns">
-                <div class="column is-3 has-text-centered">
-                    <figure class="image is-128x128 is-inline-block">
-                        <img src="https://cdn-icons-png.flaticon.com/128/747/747376.png">
-                    </figure>
+                <div class="box">
+                    <h1 class="title is-4 has-text-centered">REGISTRO DE USUARIO</h1>
                 </div>
 
-                <div class="column">
-                    <div class="box">
-                        <form>
-                          
-                            <div class="field">
-                                <label class="label">Nombre</label>
-                                <div class="control">
-                                    <input class="input" type="text" placeholder="Tu nombre">
-                                </div>
-                            </div>
+                <div class="columns">
+                    <div class="column is-3 has-text-centered">
+                        <figure class="image is-128x128 is-inline-block">
+                            <img src="https://cdn-icons-png.flaticon.com/128/747/747376.png">
+                        </figure>
+                    </div>
 
-                            <div class="field">
-                                <label class="label">Apellido</label>
-                                <div class="control">
-                                    <input class="input" type="text" placeholder="Tu apellido">
-                                </div>
-                            </div>
+                    <div class="column">
+                        <div class="box">
+                            <form>
 
-                            
-                            <div class="field">
-                                <label class="label">Email</label>
-                                <div class="control">
-                                    <input class="input" type="email" placeholder="ejemplo@correo.com">
-                                </div>
-                            </div>
-
-                            <div class="field">
-                                <label class="label">Contraseña</label>
-                                <div class="control">
-                                    <input class="input" type="password" placeholder="********">
-                                </div>
-                            </div>
-
-                            <!-- Documentos -->
-                            <div class="field">
-                                <label class="label">Tipo de documento</label>
-                          git status      <div class="control">
-                                    <div class="select is-fullwidth">
-                                        <select>
-                                            <option>Cédula de Ciudadanía</option>
-                                            <option>Tarjeta de Identidad</option>
-                                            <option>Cédula de Extranjería</option>
-                                            <option>Pasaporte</option>
-                                        </select>
+                                <div class="field">
+                                    <label class="label">Nombre</label>
+                                    <div class="control">
+                                        <input class="input" type="text" placeholder="Tu nombre" id="Nombre">
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="field">
-                                <label class="label">Número de documento</label>
-                                <div class="control">
-                                    <input class="input" type="number" placeholder="123456789">
+                                <div class="field">
+                                    <label class="label">Apellido</label>
+                                    <div class="control">
+                                        <input class="input" type="text" placeholder="Tu apellido" id="Apellido">
+                                    </div>
                                 </div>
-                            </div>
 
-                            <!-- Género -->
-                            <div class="field">
-                                <label class="label">Género</label>
-                                <div class="control">
-                                    <label class="radio">
-                                        <input type="radio" name="genero"> Masculino
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="genero"> Femenino
-                                    </label>
-                                    <label class="radio">
-                                        <input type="radio" name="genero"> Otro
-                                    </label>
-                                </div>
-                            </div>
 
-                            <!-- Botones -->
-                            <div class="field has-text-centered">
-                                <div class="control">
-                                    <button type="button" class="button is-dark is-medium" id="guardar">
-                                        Guardar
-                                    </button>
+                                <div class="field">
+                                    <label class="label">Email</label>
+                                    <div class="control">
+                                        <input class="input" type="email" placeholder="ejemplo@correo.com" id="Email">
+                                    </div>
                                 </div>
-                                <div class="control" style="margin-top: 10px;">
-                                    <a href="../index.html">
-                                        <button type="button" class="button is-dark is-medium">Volver a inicio</button>
-                                    </a>
+
+                                <div class="field">
+                                    <label class="label">Contraseña</label>
+                                    <div class="control">
+                                        <input class="input" type="password" placeholder="********" id="Contrasena">
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
+
+                                <div class="field">
+                                    <label class="label">Tipo de documento</label>
+                                    git status <div class="control">
+                                        <div class="select is-fullwidth">
+                                            <select id="Tipo_de_Documento">
+                                                <option>Cédula de Ciudadanía</option>
+                                                <option>Tarjeta de Identidad</option>
+                                                <option>Cédula de Extranjería</option>
+                                                <option>Pasaporte</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <label class="label">Número de documento</label>
+                                    <div class="control">
+                                        <input class="input" type="number" placeholder="123456789"
+                                            id="Numero_de_Documento">
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <label class="label">Género</label>
+                                    <div class="control">
+                                        <label class="radio">
+                                            <input type="radio" name="genero" id="Masculino">
+                                            Masculino
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="genero" id="Femenino">
+                                            Femenino
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="genero" id="Otro">
+                                            Otro
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <label class="label">Teléfono</label>
+                                    <div class="control">
+                                        <input class="input" type="number" placeholder="1234567890" id="Telefono">
+                                    </div>
+                                </div>
+
+                                <div class="field has-text-centered">
+                                    <div class="control">
+                                        <button type="button" class="button is-dark is-medium" id="guardar">
+                                            Guardar
+                                        </button>
+                                    </div>
+                                    <div class="control" style="margin-top: 10px;">
+                                        <a href="../index.html">
+                                            <button type="button" class="button is-dark is-medium">Volver a
+                                                inicio</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/usuario.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </body>
+
 </html>

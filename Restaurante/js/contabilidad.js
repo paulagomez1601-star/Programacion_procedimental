@@ -2,34 +2,73 @@ let ventas = document.getElementById("ventas").value;
 let fecha = document.getElementById("fecha").value;
 let ingresos = document.getElementById("ingresos").value;
 let egresos = document.getElementById("egresos").value;
-let Concepto = document.getElementById("Concepto").value;
-let Valor = document.getElementById("Valor").value;
+let Concepto = document.getElementById("concepto").value;
+let Valor = document.getElementById("valor").value;
 
 function ValidarInformacion() {
 
     if (ventas === "" || fecha === "" || ingresos === "" || egresos === "" || Concepto === "" || Valor === "") {
-        console.log("Completa todos los campos.");
+        swal.fire({
+            icon: "info",
+            title: "Oops...",
+            text: "Completa todos los campos."
+        });
     }
     else {
         if (!/[0-9]+/.test(ventas)) {
-            console.log("Las ventas deben contener solo números.");
+            swal.fire({
+                icon: "info",
+                title: "Oops...",
+                text: "Las ventas deben contener solo números."
+            });
         }
         else if (!/[0-9]+/.test(ingresos)) {
-            console.log("Los ingresos deben contener solo números.");
+            swal.fire({
+                icon: "info",
+                title: "Oops...",
+                text: "Los ingresos deben contener solo números."
+            });
         }
         else if (!/[0-9]+/.test(egresos)) {
-            console.log("Los egresos deben contener solo números.");
+            swal.fire({
+                icon: "info",
+                title: "Oops...",
+                text: "Los egresos deben contener solo números."
+            });
         }
         else if (!/[a-zA-Z\s]+/.test(Concepto)) {
-            console.log("El concepto no puede contener números.");
+            swal.fire({
+                icon: "info",
+                title: "Oops...",
+                text: "El concepto no puede contener números."
+            });
         }
         else if (!/[0-9]+/.test(Valor)) {
-            console.log("El valor debe contener solo números.");
+            swal.fire({
+                icon: "info",
+                title: "Oops...",
+                text: "El valor debe contener solo números."
+            });
         }
         else {
-            console.log("Información registrada correctamente.");
+            swal.fire({
+                icon: "info",
+                title: "¡Éxito!",
+                text: "Información registrada correctamente."
+            });
         }
     }
 }
 
-document.getElementById("guardar").onclick = ValidarInformacion;
+function ValidarInformación(mensaje) {
+    Swal.fire({
+        title: "The Internet?",
+        text: "That thing is still around?",
+        icon: "question"
+    });
+}
+
+document.getElementById("guardar").addEventListener("click", function (event) {
+    event.preventDefault();
+    ValidarInformacion();
+});
